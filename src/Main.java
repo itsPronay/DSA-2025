@@ -1,17 +1,16 @@
 //https://neetcode.io/roadmap
 
 
-import solutions.SearchA2DMatrix;
+import solutions.SearchInRotatedSortedArray;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
-        SearchA2DMatrix s = new SearchA2DMatrix();
-        int[][] matrix = {
-                {1, 2, 4, 8},
-                {10, 11, 12, 13},
-                {14, 20, 30, 40}
-        };
-        s.searchMatrix(matrix, 10);
+//        int arr[] = {3 ,1  };
+//        BinarySearch b = new BinarySearch();
+//        System.out.println(b.search(arr, 0));
+
+        SearchInRotatedSortedArray s = new SearchInRotatedSortedArray();
+        int arr[] = {3 , 2};
+        System.out.println(s.search(arr, 2));
     }
 }
