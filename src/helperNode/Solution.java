@@ -7,6 +7,9 @@ import java.util.List;
  */
 // https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/?envType=study-plan-v2&envId=leetcode-75
 
+/**
+ * this is for leetcode practise
+ */
 public class Solution {
     public ListNode deleteMiddle(ListNode head) {
         int length = 1;
