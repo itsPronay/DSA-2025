@@ -1,10 +1,10 @@
-package helperNode;
+package solutions;
 
-import java.util.List;
+import helperNode.ListNode;
 
-// public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+// https://neetcode.io/problems/merge-two-sorted-linked-lists
 
-public class Solution {
+public class MergeTwoSortedLinedList {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
 
         ListNode nodeOne = list1;
@@ -14,28 +14,27 @@ public class Solution {
         ListNode newIterator = newHead;
 
 
-        while (nodeOne.next != null && nodeTwo.next != null) {
+        while (nodeOne != null && nodeTwo != null) {
 
-            while (nodeOne.val < nodeTwo.val) {
+            if (nodeOne.val < nodeTwo.val) {
                 newIterator.next = nodeOne;
-                newIterator = newIterator.next;
                 nodeOne = nodeOne.next;
-            }
-
-            while (nodeTwo.val <= nodeOne.val) {
+            } else {
                 newIterator.next = nodeTwo;
-                newIterator = newIterator.next;
                 nodeTwo = nodeTwo.next;
             }
+
+            newIterator = newIterator.next;
+
         }
 
-        while (nodeOne.next != null) {
+        while (nodeOne != null) {
             newIterator.next = nodeOne;
             newIterator = newIterator.next;
             nodeOne = nodeOne.next;
         }
 
-        while (nodeTwo.next != null) {
+        while (nodeTwo != null) {
             newIterator.next = nodeTwo;
             newIterator = newIterator.next;
             nodeTwo = nodeTwo.next;
@@ -43,6 +42,4 @@ public class Solution {
 
         return newHead.next;
     }
-
 }
-
